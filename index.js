@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const data = require('./vnlapi.json')
+const users = require('./users.json')
 const port = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
@@ -10,7 +11,7 @@ app.get('/api', (req, res) => {
   res.send(data)
 })
 app.get('/users', (req, res) => {
-  res.send(data)
+  res.send(users)
 })
 
 app.listen(port, () => {
