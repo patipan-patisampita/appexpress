@@ -10,8 +10,14 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
   res.send(data)
 })
-app.get('/users:id', (req, res) => {
+
+app.get('/users', (req, res) => {
   res.send(users)
+})
+
+
+app.get('/users/:userId', (req, res) => {
+  res.send(req.params)
 })
 
 app.listen(port, () => {
