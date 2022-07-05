@@ -1,12 +1,9 @@
 const express = require('express')
 const app = express()
-const { loadUser } = require('./user_model')
-
 const port = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
-  const jsonContent = JSON.stringify(loadUser());
-  res.send(jsonContent)
+  res.send('Hello World!')
 })
 
 app.listen(port, () => {
