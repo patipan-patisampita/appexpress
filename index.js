@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
   res.send(data)
 })
-app.get('/users', (req, res) => {
+app.get('/users:id', (req, res) => {
   res.send(users)
 })
 
